@@ -11,3 +11,153 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* styles.css */
+
+/* NoteForm styles */
+/* Add this CSS either in a separate file or inside a style tag in your component */
+
+.note-form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: #28a745;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+button[type="submit"]:focus {
+  outline: none;
+}
+
+/* EditNoteForm styles */
+/* Add this CSS either in a separate file or inside a style tag in your component */
+
+.edit-note-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.edit-note-input,
+.edit-note-select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.edit-note-save-button,
+.edit-note-cancel-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.edit-note-cancel-button {
+  background-color: #dc3545;
+}
+
+.edit-note-save-button:hover,
+.edit-note-cancel-button:hover {
+  background-color: #0056b3;
+}
+
+.edit-note-save-button:focus,
+.edit-note-cancel-button:focus {
+  outline: none;
+}
+
+
+/* NoteList styles */
+.note-list {
+  padding: 10px;
+}
+
+.note-list h2 {
+  margin-bottom: 10px;
+}
+
+.note-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.note-list table th,
+.note-list table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.note-list table th {
+  background-color: #f2f2f2;
+}
+
+.note-list table td button {
+  margin-right: 5px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+/* Add this CSS either in a separate file or inside a style tag in your component */
+
+.summary-page {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.summary-table th,
+.summary-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.summary-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.summary-table td {
+  text-align: center;
+}
