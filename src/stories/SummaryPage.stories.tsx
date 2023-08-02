@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import { Provider } from "react-redux";
-import store from "../store/configureStore"; // Імпортуйте свій Redux store
+import store from "../store/configureStore"; 
 import SummaryPage from "../containers/SummaryPage";
 import { JSX } from "react/jsx-runtime";
 

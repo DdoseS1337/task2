@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addNote } from "../reducers/notesReducer"; 
 import { Note, NoteCategory } from "../types/types";
+import { extractDatesFromContent } from "../utils/dateUtils"; // Вказати правильний шлях
 
 
 
@@ -15,7 +16,7 @@ const NoteForm: React.FC = () => {
     e.preventDefault();
 
 
-    const datesMentioned = extractDatesFromNoteContent(content);
+    const datesMentioned = extractDatesFromContent(content);
 
    
     const newNote: Note = {
@@ -33,10 +34,6 @@ const NoteForm: React.FC = () => {
     setCategory(NoteCategory.Task); 
   };
 
-  const extractDatesFromNoteContent = (content: string): string[] => {
-    const dateRegex = /\b(\d{1,2}\/\d{1,2}\/\d{4})\b/g;
-    return content.match(dateRegex) || [];
-  };
 
   return (
     <form onSubmit={handleSubmit} className="note-form">
