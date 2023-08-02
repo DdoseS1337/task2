@@ -6,6 +6,7 @@ import { archiveNote, removeNote, editNote } from "../reducers/notesReducer";
 import NoteForm from "../components/NoteForm";
 import EditNoteForm from "../components/EditForm";
 import ArchivedNotesModal from "../components/ArchivedNotesModal";
+import NoteItem from "../components/NoteItem";
 
 const NoteList: React.FC = () => {
   const notes = useSelector((state: RootState) => state.notesData);
@@ -55,21 +56,13 @@ const NoteList: React.FC = () => {
         </thead>
         <tbody>
           {nonArchivedNotes.map((note) => (
-            <tr key={note.id}>
-              <td>{note.time.toLocaleString()}</td>
-              <td>{note.content}</td>
-              <td>{note.category}</td>
-              <td>{note.datesMentioned.join(", ")}</td>
-              <td>
-                <button onClick={() => handleEditNote(note)}>Edit</button>
-                <button onClick={() => handleArchiveNote(note.id)}>
-                  Archive
-                </button>
-                <button onClick={() => handleRemoveNote(note.id)}>
-                  Remove
-                </button>
-              </td>
-            </tr>
+            <NoteItem
+              key={note.id}
+              note={note}
+              onEditNote={handleEditNote}
+              onArchiveNote={handleArchiveNote}
+              onRemoveNote={handleRemoveNote}
+            />
           ))}
         </tbody>
       </table>
@@ -77,7 +70,7 @@ const NoteList: React.FC = () => {
       {showArchivedModal && (
         <ArchivedNotesModal onClose={handleHideArchivedModal} />
       )}
-      
+
       {editingNote ? (
         <EditNoteForm note={editingNote} onClose={handleCloseEditNoteForm} />
       ) : (

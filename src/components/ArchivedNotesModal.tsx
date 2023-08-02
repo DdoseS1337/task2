@@ -4,7 +4,7 @@ import { RootState } from "../store/configureStore";
 import { Note } from "../types/types";
 import { unarchiveNote } from "../reducers/notesReducer";
 
-interface ArchivedNotesModalProps {
+export interface ArchivedNotesModalProps {
   onClose: () => void;
 }
 

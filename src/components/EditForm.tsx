@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { Note, NoteCategory } from "../types/types";
 import { editNote } from "../reducers/notesReducer";
 
-interface EditNoteFormProps {
+export interface EditNoteFormProps {
   note: Note;
   onClose: () => void;
 }
