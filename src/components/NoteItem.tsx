@@ -1,5 +1,5 @@
 import React from "react";
-import { Note } from "../types/types"; // Змінено імпорт на reducer
+import { Note } from "../types/types"; 
 
 interface Props {
   note: Note;

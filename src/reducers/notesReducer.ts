@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Note, NoteCategory } from "../types/types";
 
-// Define the initial state for your notes
+
 const initialState: Note[] = [
   {
     id: 1,
@@ -61,7 +61,7 @@ const initialState: Note[] = [
   },
 ];
 
-// Create the notes slice using createSlice from Redux Toolkit
+
 const notesSlice = createSlice({
   name: "notesData",
   initialState,
@@ -71,7 +71,6 @@ const notesSlice = createSlice({
       const noteToArchive = state.find((note) => note.id === noteId);
 
       if (noteToArchive) {
-        // Set the 'archived' property to true for the note to archive
         noteToArchive.archived = true;
       }
     },
