@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addNote } from "../reducers/notesReducer"; 
 import { Note, NoteCategory } from "../types/types";
-import { extractDatesFromContent } from "../utils/dateUtils"; // Вказати правильний шлях
+import { extractDatesFromContent } from "../utils/dateUtils"; 
 
 
 
