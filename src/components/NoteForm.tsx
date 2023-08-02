@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addNote } from "../reducers/notesReducer"; // Using action creator from notesReducer
+import { addNote } from "../reducers/notesReducer"; 
 import { Note, NoteCategory } from "../types/types";
 
 
@@ -14,10 +14,10 @@ const NoteForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Extract dates mentioned from the content
+
     const datesMentioned = extractDatesFromNoteContent(content);
 
-    // Create a new note object
+   
     const newNote: Note = {
       id: Date.now(),
       time: new Date(),
@@ -30,7 +30,7 @@ const NoteForm: React.FC = () => {
     dispatch(addNote(newNote));
 
     setContent("");
-    setCategory(NoteCategory.Task); // Reset category to "Task" after adding the note
+    setCategory(NoteCategory.Task); 
   };
 
   const extractDatesFromNoteContent = (content: string): string[] => {
