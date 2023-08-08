@@ -1,9 +1,8 @@
-// SummaryPage.tsx
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../store/configureStore";
 import { SummaryData, NoteCategory } from "../types/types";
-import { updateSummaryData } from "../reducers/summaryReducer"; // Додайте імпорт для updateSummaryData
+import { updateSummaryData } from "../reducers/summaryReducer"; 
 
 const SummaryPage: React.FC = () => {
   const categories: NoteCategory[] = [
